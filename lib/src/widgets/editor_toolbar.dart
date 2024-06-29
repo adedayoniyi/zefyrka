@@ -245,7 +245,6 @@ class _ToggleStyleButtonState extends State<ToggleStyleButton> {
   }
 }
 
-/// Default builder for toggle style buttons.
 Widget defaultToggleStyleButtonBuilder(
   BuildContext context,
   NotusAttribute attribute,
@@ -260,7 +259,7 @@ Widget defaultToggleStyleButtonBuilder(
           ? theme.primaryIconTheme.color
           : theme.iconTheme.color
       : theme.disabledColor;
-  final fillColor = isToggled ? theme.toggleableActiveColor : theme.canvasColor;
+  final fillColor = isToggled ? theme.colorScheme.secondary : theme.canvasColor;
   return ZIconButton(
     highlightElevation: 0,
     hoverElevation: 0,
